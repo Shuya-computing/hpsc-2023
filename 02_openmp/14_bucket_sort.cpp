@@ -34,6 +34,7 @@ int main() {
   for(int i=0; i<range; i++){
       offset[i]=offset2[i]-bucket[i];
   }
+/*この二重ループの並列化ができませんでした*/
 #pragma omp parallel for
   for (int i=0; i<range; i++) {
     int j = offset[i];
